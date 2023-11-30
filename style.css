@@ -1,0 +1,235 @@
+*{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+-webkit-font-smoothing: antialiased;
+}
+html,body{
+height: 100%;
+width: 100%;
+background-color: #EFEAE3;
+}
+#main{
+width: 100%;
+padding: 34px;
+overflow: hidden;
+}
+#fixed{
+    width: 450px;
+    height: 600px;
+    background-color: red;
+    position: fixed;
+    z-index: 10;
+    border-radius: 10px;
+    display: none;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    background-size: cover;
+    background-position: center;
+}
+#container-first{
+height: 100vh;
+width: 100%;
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+nav .right{
+    margin-top: 30px;
+}
+nav .right a{
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    padding: .7em 1.5em;
+    border: 1px solid #a5a5a5;
+    border-radius: 50px;
+    font-size: 17px;
+    
+}
+.wrapper-con-fir{
+    width: 100%;
+    height: calc(100% - 10vh);
+    display: flex;
+}
+.con-fir-left, .con-fir-right{
+    width: 50%;
+    height: 100%;
+}
+.con-fir-left{
+    display: flex;
+    align-items: end;
+    justify-content: start;
+}
+.con-fir-left p{
+    margin-bottom: 250px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: gilroy;
+    line-height: 1;
+}
+.con-fir-right{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+.con-fir-right h1{
+    margin-bottom: 250px;
+    font-size: 150px;
+    text-transform: uppercase;
+    line-height: .8;
+    font-weight: 800;
+    font-family: gilroy;
+    -moz-transform: scale(1, 1.1);
+}
+.line{
+    width: 95.5%;
+    height: 1px;
+    background-color: #a5a5a5;
+    position: absolute;
+    top: 83%;
+}
+#container-seconde{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.oval-shape{
+    width: 500px;
+    height: 900px;
+    border-radius: 50%;
+    background: linear-gradient(rgb(255, 123, 0), orangered);
+    animation-name: ovalanimate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    top: -350px;
+    right: -70px;
+    animation-direction: alternate;
+    filter: blur(50px);
+    box-shadow: -35px -35px 30px orangered, 35px 35px 30px orange;
+}
+.oval-shape{
+    width: 500px;
+    height: 700px;
+    border-radius: 50%;
+    background: linear-gradient(rgb(255, 123, 0), orangered);
+    animation-name: ovalanimate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    animation-direction: alternate-reverse;
+    filter: blur(50px);
+    box-shadow: -35px -35px 30px orangered, 35px 35px 30px orange;
+}
+.video-box{
+    width: 100%;
+    height: 95%;
+    background-color: aqua;
+    border-radius: 30px;
+    position: absolute;
+    top: -120px;
+    overflow: hidden;
+}
+.video-box video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#container-third{
+    width: 100%;
+    height: 100vh;
+}
+.shap{
+    width: 500px;
+    height: 500px;
+    background:linear-gradient(orange, orangered);
+    border-radius: 50%;
+    animation-name: anime;
+    animation-duration: 2s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* transform: translate(skew(-50%)); */
+    filter: blur(10px);
+}
+.shap2{
+    width: 500px;
+    height: 500px;
+    background:linear-gradient(orange, orangered);
+    border-radius: 50%;
+    animation-name: anime;
+    animation-duration: 2s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    /* transform: translate(skew(-50%)); */
+    filter: blur(10px);
+}
+#container-four{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /* background-color: greenyellow; */
+}
+.display{
+    position: relative;
+    width: 105%;
+    height: 14vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: gilroy;
+    /* background-color: orange; */
+    border-bottom: 1px solid gray;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    left: -33.5px;
+
+}
+.display::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    position: absolute;
+    top: -100%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+}
+.display:hover::after{
+    top: 0%;
+}
+.display h1{
+    font-size: 25px;
+    z-index: 9;
+    margin-left: 20px;
+}  
+.display .inner-sec-box{
+    z-index: 9;
+    margin-right: 20px;
+}  
+
+@keyframes ovalanimate {
+    from{
+        transform: translate(-10%, -10%) skew(10deg) rotate(80deg);
+    }
+    to{
+        transform: translate(10%, 10%) skew(-10deg) rotate(80deg);
+    }
+}
+@keyframes anime {
+    from{
+        transform: translate(-5%, -5%) skew(15deg);
+    }
+    to{
+        transform: translate(5%, 5%) skew(-15deg);
+    }
+    
+}
