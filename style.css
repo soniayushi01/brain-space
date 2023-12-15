@@ -224,6 +224,80 @@ nav .right a{
         transform: translate(10%, 10%) skew(-10deg) rotate(80deg);
     }
 }
+.container-five{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contain-div{
+    border-radius: 22px;
+    width: 98%;
+    height: 96vh;
+    background-color: black;
+    display: flex;
+    overflow: hidden;
+}
+.left-cont{
+    width: 45%;
+    background-color: black;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left-cont .text-center{
+    width: 50%;
+    height: 50%;
+    /* background-color: #773131; */
+}
+.left-cont .text-center .text-upper{
+    display: flex;
+    gap: 20px;
+}
+.left-cont .text-center .text-upper .top-line{
+    width: 3px;
+    height: 25vh;
+    background-color: #a5a5a5;
+    position: relative;
+}
+.left-cont .text-center .text-upper .top-line .innner-line{
+    width: 100%;
+    height: 8.33vh;
+    background-color: #FE330A;
+    position: absolute;
+    /* animation-name: line;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    animation-iteration-count: infinite; */
+}
+.left-cont .text-center .text-upper .top-text{
+    font-size: 27px;
+    font-family: gilroy;
+    font-weight: 500;
+    color: #504A45;
+    cursor: pointer;
+    font-size: 30px;
+}
+.left-cont .text-center .text-upper .top-text h1:nth-child(1){
+    color: white;
+}
+.left-cont .text-center .text-upper .top-text h1:nth-child(2){
+    color: #504A45;
+}
+.left-cont .text-center .text-upper .top-text h1:nth-child(3){
+    color: #504A45;
+}
+.right-cont{
+    width: 55%;
+    background-color: antiquewhite;
+    height: 100%;
+    border-radius: 20px;
+    background-image: url(https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15e1_Project.webp);
+    background-size: cover;
+    background-position: center;
+}
 @keyframes anime {
     from{
         transform: translate(-5%, -5%) skew(15deg);
@@ -232,4 +306,15 @@ nav .right a{
         transform: translate(5%, 5%) skew(-15deg);
     }
     
+}
+@keyframes line {
+    0%{
+        top: 0%;
+    }
+    50%{
+        top: 50%;
+    }
+    100%{
+        top: 100%;
+    }
 }
