@@ -12,7 +12,10 @@ background-color: #EFEAE3;
 #main{
 width: 100%;
 padding: 34px;
+/* background-color: #EFEAE3; */
 overflow: hidden;
+position: relative;
+z-index: 10;
 }
 #fixed{
     width: 450px;
@@ -29,19 +32,25 @@ overflow: hidden;
     background-position: center;
 }
 #container-first{
-height: 100vh;
+min-height: 100vh;
 width: 100%;
+/* background-color: #504A45; */
+position: relative;
 }
 nav{
     width: 100%;
-    height: 10vh;
+    /* padding: 10px 22px; */
     display: flex;
     justify-content: space-between;
 }
 nav .right{
     margin-top: 30px;
+    display: flex;
+    gap: 40px;
 }
 nav .right a{
+    display: block;
+    overflow: hidden;
     text-decoration: none;
     color: black;
     margin-left: 20px;
@@ -49,12 +58,36 @@ nav .right a{
     border: 1px solid #a5a5a5;
     border-radius: 50px;
     font-size: 17px;
-    
+    position: relative;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+    z-index: 9;
+}
+nav .right a:hover{
+    color: white;
+}
+nav .right a::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: -100%;
+    top: 100%;
+    left: 0;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+    z-index: -1;
+    border-radius: 50%;
+}
+nav .right a:hover::after {
+    top: 0%;
+    border-radius: 0%;
 }
 .wrapper-con-fir{
     width: 100%;
-    height: calc(100% - 10vh);
+    height: 100vh;
     display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 .con-fir-left, .con-fir-right{
     width: 50%;
@@ -95,7 +128,7 @@ nav .right a{
 }
 #container-seconde{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 .oval-shape{
@@ -113,6 +146,7 @@ nav .right a{
     animation-direction: alternate;
     filter: blur(50px);
     box-shadow: -35px -35px 30px orangered, 35px 35px 30px orange;
+    /* display: none; */
 }
 .oval-shape{
     width: 500px;
@@ -135,6 +169,7 @@ nav .right a{
     border-radius: 30px;
     position: absolute;
     top: -120px;
+    /* display: none; */
     overflow: hidden;
 }
 .video-box video{
@@ -230,6 +265,7 @@ nav .right a{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #EFEAE3;
 }
 .contain-div{
     border-radius: 22px;
@@ -259,7 +295,7 @@ nav .right a{
 .left-cont .text-center .text-upper .top-line{
     width: 3px;
     height: 25vh;
-    background-color: #a5a5a5;
+    background-color: #504A45;
     position: relative;
 }
 .left-cont .text-center .text-upper .top-line .innner-line{
@@ -280,6 +316,13 @@ nav .right a{
     cursor: pointer;
     font-size: 30px;
 }
+.text-down{
+    color: #fff;
+    margin-top: 30px;
+    width: 120%;
+    font-family: gilroy;
+    background-color: #FE330A;
+}
 .left-cont .text-center .text-upper .top-text h1:nth-child(1){
     color: white;
 }
@@ -294,9 +337,27 @@ nav .right a{
     background-color: antiquewhite;
     height: 100%;
     border-radius: 20px;
-    background-image: url(https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15e1_Project.webp);
-    background-size: cover;
-    background-position: center;
+    overflow: hidden;
+}
+.right-cont img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+#container-six{
+    width: 100%;
+    height: 100vh;
+    /* background-color: rebeccapurple; */
+    /* position: relative; */
+}
+footer{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    bottom: 0%;
+    background-color: rgb(0, 0, 0);
+    z-index: 9;
 }
 @keyframes anime {
     from{
