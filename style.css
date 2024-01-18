@@ -8,13 +8,39 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: #efeae3;
+  /* background-color: #efeae3; */
 }
 #main {
   width: 100%;
   overflow: hidden;
   position: relative;
   z-index: 10;
+}
+#swiping-cursor{
+  width: 100px;
+  height: 100px;
+  background-color: #FE320A;
+  gap: 3px;
+  position: fixed;
+  z-index: 100;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+#swiping-cursor i{
+  font-size: 24px;
+  color: white;
+  font-weight: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#swiping-cursor i:nth-child(1){
+  margin-left: -10px;
+}
+#swiping-cursor i:nth-child(2){
+  margin-left: 10px;
 }
 #fixed {
   width: 450px;
@@ -396,6 +422,7 @@ nav .right a:hover::after {
   padding: 0px 34px;
   background-color: #efeae3;
   padding-top: 130px;
+  flex-direction: column;
 }
 .contain-div {
   border-radius: 22px;
@@ -467,25 +494,48 @@ nav .right a:hover::after {
   height: 100%;
   border-radius: 20px;
   overflow: hidden;
+  background-image: url();
 }
-.right-cont img {
+.img_fev{
+  width: 100%;
+  height: 100%;
+  background-image: url();
+  background-position: center;
+  background-size: cover;
+}
+/* .img_fev img{
   object-fit: cover;
   object-position: center;
   width: 100%;
   height: 100%;
+} */
+.swiper {
+  width: 100%;
+  height: 50vh;
+  padding: 30px;
+}
+.swiper-slide {
+  font-size: 18px;
+  background: #86484831;
+}
+.swiper-slide {
+  width: 30%;
+  border-left: 1px solid #a5a5a5;
 }
 #container-six {
   width: 100%;
   height: 105vh;
   position: relative;
+  pointer-events: none;
+ background-color: #a5a5a586;
 }
 footer {
   width: 100%;
   height: 95vh;
   position: fixed;
   bottom: 0%;
-  background-color: rgb(193, 75, 75);
-  z-index: 9;
+  background-color: rgb(0, 0, 0);
+  z-index: 999s;
   display: flex;
   /* align-items: ; */
   flex-direction: column;
@@ -493,12 +543,148 @@ footer {
   color: white;
   /* font-size: 20vw; */
 }
+.fo-down{
+  padding: 0px 34px;
+}
+.fo-down-img{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #a5a5a5;
+  /* gap: 30px; */
+  padding-bottom: 30px;
+}
+.fo-down-img img{
+  /* margin-top: 30px; */
+}
+.fo-down-links{
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.fo-down-links a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: relative;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+.fo-down-links a::after{
+  content: "";
+  width: 0px;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 10;
+  margin-top: 5px;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+.fo-down-links a:hover::after{
+  width: 100%;
+}
+.fo-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:10vw 5vw;
+}
+.fo-left a{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  font-size: 2.5vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 900;
+  line-height: 1;
+}
+.fo-right{
+  margin-right:-300px;
+}
+.fo-right .fo-right-top-p{
+  width: 60%;
+  /* background-color: #efeae3; */
+  margin-bottom: 20px;
+}
+.fo-right .fo-right-top-p p{
+  font-size: 1.5vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.fo-right-email{
+  border-bottom: 1px solid #504a45;
+  padding: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+.fo-right-email input{
+  outline: none;
+  background-color: transparent;
+  border: none;
+  width: 50%;
+  height: 150%;
+  pad: 2vw;
+}
+
+::placeholder {
+  color: white;
+  font-size: 1vw;
+}
+.one{
+  width: 1500px;
+  height: 500px;
+  background: linear-gradient(rgb(255, 51, 0), rgb(255, 34, 0));
+  border-radius: 50%;
+  animation-name: anime-two;
+  animation-duration: 2s;
+  position: absolute;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  filter: blur(30px);
+  z-index: -2;
+  top: -70px;
+  right: -300px;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  /* rotate: (50deg) translate; */
+  transform: rotate(90deg);
+}
+.two{
+  width: 1500px;
+  height: 500px;
+  background: linear-gradient(rgb(255, 68, 0), orangered);
+  border-radius: 50%;
+  animation-name: anime-two;
+  animation-duration: 2s;
+  position: absolute;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  filter: blur(30px);
+  z-index: -1;
+  top: -100px;
+  left: -300px;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  /* rotate: (50deg) translate; */
+  transform: rotate(90deg);
+}
 @keyframes anime {
   from {
-    transform: translate(-5%, -5%) skew(15deg);
+    transform: translate(-5%, -5%) skew(15deg) rotate(20deg);
   }
   to {
-    transform: translate(5%, 5%) skew(-15deg);
+    transform: translate(5%, 5%) skew(-15deg) rotate(-20deg);
+  }
+}
+@keyframes anime-two {
+  from {
+    transform: translate(-5%, -5%) skew(5deg);
+  }
+  to {
+    transform: translate(5%, 5%) skew(-5deg);
   }
 }
 @keyframes line {

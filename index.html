@@ -10,9 +10,14 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
     rel="stylesheet"
 />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="swiping-cursor"><i class="ri-arrow-left-s-line"></i><i class="ri-arrow-right-s-line"></i></div>
     <div id="main">
         <div id="fixed"></div>
         <div id="container-first">
@@ -34,7 +39,6 @@
                     <h1>spaces <br>
                         &#160; &#160; &#160;that <br>
                         inspire</h1>
-
                 </div>
             </div>
             <div class="line"></div>
@@ -168,17 +172,89 @@
                     </div>
                 </div>
                 <div class="right-cont">
-                    <img data-scroll data-scroll-speed="1" src="https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15e1_Project.webp" alt="">
+                    <div class="img_fev" data-image="https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15e1_Project.webp">
+                    </div>
+                    <div class="img_fev" data-image="https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15d0_Project.webp">
+                    </div>
+                    <div class="img_fev" data-image="https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15cd_Execution.webp">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="swiper-logo">
+                        <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b15ff_Nike.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-logo">
+                        <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1600_Converse.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                        <div class="swiper-logo">
+                        <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b15fd_Arc%E2%80%99teryx.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                        <div class="swiper-logo">
+                        <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b15fe_Hunter.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                        <div class="swiper-logo">
+                        <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1601_MediaLink.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                        <div class="swiper-logo">
+                        <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1602_AfterPay.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </div>
+        <!-- <div id="container-six"></div> -->
+    </div>
+    <footer>
+        <div class="moving-wrraper">
+            <div class="one"></div>
+            <div class="one two"></div>
+        </div>
+        <div class="fo-top">
+            <div class="fo-left">
+                <a href="#">Work</a><a href="#">Studio</a><a href="#">Contact</a>
+            </div>
+            <div class="fo-right">
+                <div class="fo-right-top-p">
+                    <p>Get industry insights and creative inspiration straight to your inbox.</p>
+                </div>
+                <div class="fo-right-email">
+                    <input type="email" placeholder="Email adders" name="mail" id="mail">
+                    <i class="ri-arrow-right-line"></i>
                 </div>
             </div>
         </div>
-        <div id="container-six"></div>
-    </div>
-    <footer>
-        <h1>SUNDOWN</h1>
+        <div class="fo-down">
+            <div class="fo-down-img">
+                <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15c6_Footer%20Logo.svg" alt="">
+            </div>
+            <div class="fo-line"></div>
+            <div class="fo-down-links">
+                <h3>Copyright <i class="ri-copyright-line"></i> Sundown Studio</h3>
+                <h3><i class="ri-global-line"></i> Brooklyn, NY</h3>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script src="script.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
